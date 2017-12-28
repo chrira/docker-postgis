@@ -8,8 +8,6 @@ USER root
 RUN yum -y install epel-release \
       && yum -y install postgis
       #&& yum -y install postgis2_95 postgis2_95-client
-      
-USER postgres
 
 #RUN apt-get update \
 #      && apt-get install -y --no-install-recommends \
@@ -22,3 +20,4 @@ RUN mkdir -p /docker-entrypoint-initdb.d
 COPY ./initdb-postgis.sh /docker-entrypoint-initdb.d/postgis.sh
 COPY ./update-postgis.sh /usr/local/bin
 
+USER postgres
