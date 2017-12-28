@@ -1,5 +1,4 @@
-FROM postgres:9.6
-MAINTAINER Mike Dillon <mike@appropriate.io>
+FROM openshift/postgresql-92-centos7
 
 ENV POSTGIS_MAJOR 2.4
 ENV POSTGIS_VERSION 2.4.0+dfsg-1.pgdg80+1
