@@ -6,7 +6,8 @@ ENV POSTGIS_VERSION 2.4.0+dfsg-1.pgdg80+1
 USER root
 
 RUN yum -y install epel-release \
-      && yum -y install postgis2_95 postgis2_95-client
+      && yum -y install postgis
+      #&& yum -y install postgis2_95 postgis2_95-client
       
 USER postgres
 
