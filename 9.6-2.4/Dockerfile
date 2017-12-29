@@ -6,6 +6,7 @@ ENV POSTGIS_VERSION 2.4.0+dfsg-1.pgdg80+1
 USER root
 
 RUN rpm -ivh http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm \
+      && rpm -ivh https://download.postgresql.org/pub/repos/yum/9.6/redhat/rhel-7-x86_64/pgdg-centos96-9.6-3.noarch.rpm \
       && yum -y install postgis24_96 postgis24_96-client \
       && ls -la /opt/rh/postgresql92/root/usr/share/pgsql/extension/
       #yum -y install epel-release \
